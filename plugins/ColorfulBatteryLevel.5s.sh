@@ -9,7 +9,8 @@
 # <bitbar.image>https://i.imgur.com/JaUKQWj.png</bitbar.image>
 # <bitbar.dependencies>bash</bitbar.dependencies>
 # <bitbar.abouturl>https://github.com/Phlooo/</bitbar.abouturl>
-
+#
+# tweaked by longpdo (https://github.com/longpdo)
 
 # Get info
 power_source=( $(pmset -g batt | awk 'FNR == 1 {print $4$NF}' ) )
@@ -103,6 +104,10 @@ reconstructed_img=$img_base${!suffix}
 # Set the display text
 display_text="$battery_level%"
 
+if [ "$remaining_time" != "0:00" ] && [ "$battery_status" != "Charged" ]; then
+	display_text="$battery_level% ($remaining_time)"
+fi
+
 # Generate the final output
 display_output="$display_text | image=$reconstructed_img size=12"
 
@@ -115,9 +120,6 @@ echo "---"
 echo "Source: $source_label";
 echo "Current charge: $battery_level%";
 echo "Status: $battery_status";
-if [ "$remaining_time" != "0:00" ] && [ "$battery_status" != "Charged" ]; then
-	echo "$time_label $remaining_time"
-fi
 
 echo "---"
 
