@@ -8,16 +8,19 @@
 # <bitbar.image>https://i.imgur.com/YNypf0P.jpg</bitbar.image>
 # <bitbar.dependencies>python</bitbar.dependencies>
 #
-# by mgjo5899
+# by mgjo589
+# tweaked by longpdo (https://github.com/longpdo)
 
-import json, uuid, time, hmac, hashlib
+import json
+import uuid
+import time
+import hmac
+import hashlib
 
 from base64 import b64encode
+from datetime import datetime
 from urllib.request import urlopen, Request
 from urllib.parse import urlencode, quote
-
-# Change unit to 'c' for celsius and 'f' for fahrenheit
-unit = 'c'
 
 # General Placeholders
 url = 'https://weather-ydn-yql.media.yahoo.com/forecastrss'
@@ -30,7 +33,7 @@ consumer_key = 'dj0yJmk9RlJhbUVpUEpsSUxEJmQ9WVdrOVpqYzNObEZSTXpJbWNHbzlNQS0tJnM9
 consumer_secret = '75c592717d22c5cce623d2c2a1d5a5b36786d865'
 
 # Query and authentication related
-query = {'location': f'seoul,korea', 'format': 'json', 'u': unit}
+query = {'location': f'Nuremberg,BY', 'format': 'json', 'u': 'c'}
 oauth = {
     'oauth_consumer_key': consumer_key,
     'oauth_nonce': uuid.uuid4().hex,
@@ -53,27 +56,20 @@ def exception_handler(msg="Something is wrong"):
     return decorator
 
 
-@exception_handler(msg="Location service")
-def get_location_using_ip():
-    service_endpoint = 'http://ip-api.com/json'
-    r = urlopen(service_endpoint).read()
-    j = json.loads(r)
-    city = j['city']
-    region = j['region']
-
-    return f"{city},{region}"
-
-
 def get_auth_header():
     global oauth
     merged_params = query.copy()
     merged_params.update(oauth)
-    sorted_params = [k + '=' + quote(merged_params[k], safe='') for k in sorted(merged_params.keys())]
-    signature_base_str =  method + concat + quote(url, safe='') + concat + quote(concat.join(sorted_params))
+    sorted_params = [k + '=' + quote(merged_params[k], safe='')
+                     for k in sorted(merged_params.keys())]
+    signature_base_str = method + concat + \
+        quote(url, safe='') + concat + quote(concat.join(sorted_params))
     composite_key = quote(consumer_secret, safe='') + concat
-    oauth_signature = b64encode(hmac.new(composite_key.encode(), msg=signature_base_str.encode(), digestmod=hashlib.sha1).digest()).decode()
+    oauth_signature = b64encode(hmac.new(composite_key.encode(
+    ), msg=signature_base_str.encode(), digestmod=hashlib.sha1).digest()).decode()
     oauth['oauth_signature'] = oauth_signature
-    auth_header = 'OAuth ' + ', '.join(['{}="{}"'.format(k,v) for k,v in oauth.items()])
+    auth_header = 'OAuth ' + \
+        ', '.join(['{}="{}"'.format(k, v) for k, v in oauth.items()])
 
     return auth_header
 
@@ -86,18 +82,21 @@ def get_weather(auth_header):
     request.add_header('X-Yahoo-App-Id', app_id)
     r = urlopen(request).read()
     j = json.loads(r)
-    condition_data = j['current_observation']['condition']
-    condition = condition_data['text']
-    temperature = condition_data['temperature']
+    return j
 
-    return (condition, temperature)
 
-location = get_location_using_ip()
-query['location'] = location
 auth_header = get_auth_header()
-condition, temperature = get_weather(auth_header)
+weather_data = get_weather(auth_header)
+condition_text = weather_data['current_observation']['condition']['text']
+condition_temperatur = weather_data['current_observation']['condition']['temperature']
+forecasts = weather_data['forecasts']
 
-if unit == 'c':
-  print(str(condition) + ' : ' + str(int(temperature)) + '°C')
-elif unit == 'f':
-  print(str(condition) + ' : ' + str(int(temperature)) + '°F')
+print(str(condition_text) + ': ' + str(int(condition_temperatur)) + '°C')
+# Dropdown info
+print('---')
+for day in forecasts:
+    print(str(datetime.utcfromtimestamp(
+        int(day['date'])).strftime('%A %d. %B')))
+    print(str(day['text']) + ': ' + str(int(day['low'])) +
+          '-' + str(int(day['high'])) + '°C')
+    print('---')
