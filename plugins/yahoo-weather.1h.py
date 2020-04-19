@@ -91,8 +91,11 @@ condition_text = weather_data['current_observation']['condition']['text']
 condition_temperatur = weather_data['current_observation']['condition']['temperature']
 forecasts = weather_data['forecasts']
 
-print(str(condition_text) + ': ' + str(int(condition_temperatur)) + '°C')
+print(str(int(condition_temperatur)) + '°C')
 # Dropdown info
+print('---')
+print('Today')
+print(str(condition_text) + ': ' + str(int(condition_temperatur)) + '°C')
 print('---')
 for day in forecasts:
     print(str(datetime.utcfromtimestamp(

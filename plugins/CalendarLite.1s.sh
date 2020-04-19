@@ -11,7 +11,7 @@
 #
 # tweaked by longpdo (https://github.com/longpdo)
 
-formatted_date=$(date '+%A %d. %B %T')
+formatted_date=$(date '+%A %d.%m %T')
 echo "$formatted_date"
 
 # Dropdown info
