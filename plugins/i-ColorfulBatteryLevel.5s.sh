@@ -29,7 +29,7 @@ else
 	time_label="Time remaining:";
 fi
 
-if [ "$remaining_time" = "(no" ]; then remaining_time="Calculating..."; fi
+if [ "$remaining_time" = "(no" ]; then remaining_time="..."; fi
 
 if [ "$battery_status" = "charged" ]; then
 	battery_status="Charged";
