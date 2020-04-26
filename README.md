@@ -44,7 +44,7 @@ This repo contains scripts, programs and command-line tools that add functionali
 
 ### Plugins I wrote
 
-* [Social Media Stats](https://github.com/longpdo/bitbar-plugins-custom/blob/master/deactivated-plugins/social_media_stats.1h.py)
+* [Social Media Stats](https://getbitbar.com/plugins/Web/Instagram/social_media_stats.1h.py)
   * Shows YouTube subscribers, Facebook likes, Instagram and Twitter followers.
 [![Social Media Stats Screenshot][social-media-stats-screenshot]](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/yahoo-weather.1h.py)
 
