@@ -13,6 +13,8 @@
 * [About The Project](#about-the-project)
   * [Plugins I am currently using](#plugins-i-am-currently-using)
   * [Plugins I wrote](#plugins-i-wrote)
+    * [Yahoo Stock Ticker](#yahoo-stock-ticker)
+    * [Social Media Stats](#social-media-stats)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -44,8 +46,24 @@ This repo contains scripts, programs and command-line tools that add functionali
 
 ### Plugins I wrote
 
-* [Social Media Stats](https://getbitbar.com/plugins/Web/Instagram/social_media_stats.1h.py)
-  * Shows YouTube subscribers, Facebook likes, Instagram and Twitter followers.
+#### [Yahoo Stock Ticker](https://example.com)
+
+* Shows major stock indices in the menu bar
+* Shows stock symbols in the dropdown menu with additional information in the submenus
+
+[![Yahoo Stock Ticker Screenshot 1][yahoo-stock-ticker]](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/yahoo_stock_ticker.18m.py)
+
+* Able to set price alarms for BUY or SELL limits for each stock in the watchlist
+* Notifies you if current stock price is lower than your set BUY limit
+* Notifies you if current stock price is greater than your set SELL limit
+* Remove one of your price limits by clicking on it
+* Clear all price limits
+
+[![Yahoo Stock Ticker Screenshot 2][yahoo-stock-ticker-2]](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/yahoo_stock_ticker.18m.py)
+
+#### [Social Media Stats](https://getbitbar.com/plugins/Web/Instagram/social_media_stats.1h.py)
+
+* Shows YouTube subscribers, Facebook likes, Instagram and Twitter followers.
 [![Social Media Stats Screenshot][social-media-stats-screenshot]](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/yahoo-weather.1h.py)
 
 <!-- GETTING STARTED -->
@@ -115,4 +133,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [product-screenshot]: images/screenshot.png
 [calendarlite-screenshot]: images/CalendarLite.png
 [social-media-stats-screenshot]: images/social_media_stats.gif
+[yahoo-stock-ticker]: images/yahoo-stock-ticker.gif
+[yahoo-stock-ticker-2]: images/yahoo-stock-ticker-2.gif
 [yahoo-weather-screenshot]: images/yahoo-weather.png
