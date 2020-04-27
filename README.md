@@ -48,6 +48,8 @@ This repo contains scripts, programs and command-line tools that add functionali
 
 #### [Yahoo Stock Ticker](https://example.com)
 
+Dependencies: Python3 (there is also a version of this in [Bash](https://github.com/longpdo/bitbar-plugins-custom/blob/master/deactivated-plugins/yahoo-stock-ticker.5m.sh), but without the price alarm functionality)
+
 * Shows major stock indices in the menu bar
 * Shows stock symbols in the dropdown menu with additional information in the submenus
 
@@ -62,6 +64,8 @@ This repo contains scripts, programs and command-line tools that add functionali
 [![Yahoo Stock Ticker Screenshot 2][yahoo-stock-ticker-2]](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/yahoo_stock_ticker.18m.py)
 
 #### [Social Media Stats](https://getbitbar.com/plugins/Web/Instagram/social_media_stats.1h.py)
+
+Dependencies: Python3, beautifulsoup4, requests
 
 * Shows YouTube subscribers, Facebook likes, Instagram and Twitter followers.
 [![Social Media Stats Screenshot][social-media-stats-screenshot]](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/yahoo-weather.1h.py)

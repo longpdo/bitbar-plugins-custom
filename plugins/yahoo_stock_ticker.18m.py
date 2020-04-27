@@ -7,7 +7,7 @@
 # <bitbar.desc>Shows major stock indices in the menu bar and stock symbols in the dropdown menu. You can also set price alarms for BUY/SELL limits, which will notify you when the limit is reached.</bitbar.desc>
 # <bitbar.image>https://github.com/longpdo/bitbar-plugins-custom/raw/master/images/yahoo-stock-ticker.png</bitbar.image>
 # <bitbar.dependencies>python3</bitbar.dependencies>
-# <bitbar.abouturl>https://github.com/longpdo/bitbar-plugins-custom</bitbar.abouturl>
+# <bitbar.abouturl>https://github.com/longpdo/bitbar-plugins-custom/blob/master/README.md#yahoo-stock-ticker</bitbar.abouturl>
 #
 # by longpdo (https://github.com/longpdo)
 
@@ -20,14 +20,13 @@ import subprocess
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Enter your stock symbols here in the format: ["symbol1", "symbol2", ...]
-symbols = ["FB", "AAPL", "AMZN", "NFLX", "GOOG", "BIDU", "BABA", "TCEHY"]
-# symbols = ["MMM.F", "4AB.F", "ADS.F", "ADB.F", "AIR.F", "AHLA.F", "ABEC.F", "PHM7.F", "AMZ.F", "A0T.F", "10E.F", "APC.F",
-#            "AT1.DE", "SOBA.F", "21P.F", "B4F.F", "BRYN.F", "BLQA.F", "PCE1.F", "BMT.F", "CY2.F", "POH1.F", "CTO.F",
-#            "7CI.F", "EVD.F", "DAP.F", "FQI.F", "EZV.F", "FB2A.F", "FRE.F", "FPE.F", "ITB.F", "IUI1.F", "JNJ.F", "LOR.F",
-#            "MOH.F", "M4I.F", "MDO.F", "MSF.F", "MOB.F", "MTX.F", "NAQ.F", "N1U.F", "NKE.F", "PCX.F", "0PY.F", "2PP.F",
-#            "PEP.F", "4I1.F", "3PL.F", "RAA.F", "R6C3.F", "FOO.F", "SAP.F", "SQI.F", "SIX3.F", "SFT.F", "SRB.F", "SYK.F",
-#            "TKE.F", "NNND.F", "TL0.F", "TII.F", "BCO.F", "HDI.F", "TT8.F", "UNI2.F", "WDP.F", "TMR.F", "UNP.F", "3V64.F",
-#            "W8A.F", "UWS.F", "WDI.F"]
+symbols = ["MMM.F", "4AB.F", "ADS.F", "ADB.F", "AIR.F", "AHLA.F", "ABEC.F", "PHM7.F", "AMZ.F", "A0T.F", "10E.F", "APC.F",
+           "AT1.DE", "SOBA.F", "21P.F", "B4F.F", "BRYN.F", "BLQA.F", "PCE1.F", "BMT.F", "CY2.F", "POH1.F", "CTO.F",
+           "7CI.F", "EVD.F", "DAP.F", "FQI.F", "EZV.F", "FB2A.F", "FRE.F", "FPE.F", "ITB.F", "IUI1.F", "JNJ.F", "LOR.F",
+           "MOH.F", "M4I.F", "MDO.F", "MSF.F", "MOB.F", "MTX.F", "NAQ.F", "N1U.F", "NKE.F", "PCX.F", "0PY.F", "2PP.F",
+           "PEP.F", "4I1.F", "3PL.F", "RAA.F", "R6C3.F", "FOO.F", "SAP.F", "SQI.F", "SIX3.F", "SFT.F", "SRB.F", "SYK.F",
+           "TKE.F", "NNND.F", "TL0.F", "TII.F", "BCO.F", "HDI.F", "TT8.F", "UNI2.F", "WDP.F", "TMR.F", "UNP.F", "3V64.F",
+           "W8A.F", "UWS.F", "WDI.F"]
 # ---------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------------------------
