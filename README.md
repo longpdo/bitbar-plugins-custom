@@ -32,17 +32,21 @@ This repo contains scripts, programs and command-line tools that add functionali
 
 ### Plugins I am currently using
 
-* [Clock with calendar](https://getbitbar.com/plugins/Time/CalendarLite.1m.sh)
-  * Tweaked the format of the date displayed in the menu bar
-[![CalenderLite Screenshot][calendarlite-screenshot]](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/CalendarLite.1s.sh)
+* [Yahoo Stock Ticker](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/yahoo_stock_ticker.18m.py)
 * [Clipboard History](https://getbitbar.com/plugins/System/clipboard-history.3s.sh)
+* [Countdown Timer 2](https://getbitbar.com/plugins/Time/countdown_timer_2.1s.py)
 * [Colorful Battery Indicator](https://getbitbar.com/plugins/System/ColorfulBatteryLevel.5s.sh)
   * Added the remaining time to show in the menu bar, when the battery is discharging
-* [Countdown Timer 2](https://getbitbar.com/plugins/Time/countdown_timer_2.1s.py)
 * [Yahoo Weather](https://getbitbar.com/plugins/Weather/yahoo-weather.5m.py)
   * Simplified to only show the temperature in the menu bar
   * Added weather forecast for the next days in the dropdown view
+
 [![Yahoo Weather Screenshot][yahoo-weather-screenshot]](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/yahoo-weather.1h.py)
+
+* [Clock with calendar](https://getbitbar.com/plugins/Time/CalendarLite.1m.sh)
+  * Tweaked the format of the date displayed in the menu bar
+
+[![CalenderLite Screenshot][calendarlite-screenshot]](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/CalendarLite.1s.sh)
 
 ### Plugins I wrote
 
@@ -68,6 +72,7 @@ Dependencies: Python3 (there is also a version of this in [Bash](https://github.
 Dependencies: Python3, beautifulsoup4, requests
 
 * Shows YouTube subscribers, Facebook likes, Instagram and Twitter followers.
+
 [![Social Media Stats Screenshot][social-media-stats-screenshot]](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/yahoo-weather.1h.py)
 
 <!-- GETTING STARTED -->
