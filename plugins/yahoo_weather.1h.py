@@ -85,6 +85,5 @@ if __name__ == '__main__':
         date = datetime.fromtimestamp(int(day['date']))
 
         print(date.strftime('%A %d. %B'))
-        print(day['text'] + ': ' + str(day['low']) +
-              '-' + str(day['high']) + '°C')
+        print(day['text'] + ': ' + str(day['low']) + '-' + str(day['high']) + '°C')
         print('---')
