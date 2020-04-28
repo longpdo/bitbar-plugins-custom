@@ -54,8 +54,10 @@ This repo contains scripts, programs and command-line tools that add functionali
 
 Dependencies: Python3 (there is also a version of this in [Bash](https://github.com/longpdo/bitbar-plugins-custom/blob/master/deactivated-plugins/yahoo-stock-ticker.5m.sh), but without the price alarm functionality)
 
+* Pulls stock information from the Yahoo Finance API v7
 * Shows major stock indices in the menu bar
 * Shows stock symbols in the dropdown menu with additional information in the submenus
+* Orders stock symbols by user configuration (alphabetically, market change by value ascending or descending or by absolute value)
 
 [![Yahoo Stock Ticker Screenshot 1][yahoo-stock-ticker]](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/yahoo_stock_ticker.18m.py)
 
