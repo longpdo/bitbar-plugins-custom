@@ -50,7 +50,7 @@ This repo contains scripts, programs and command-line tools that add functionali
 
 ### Plugins I wrote
 
-#### [Yahoo Stock Ticker](https://example.com)
+#### [Yahoo Stock Ticker](https://getbitbar.com/plugins/Finance/yahoo_stock_ticker.10m.py)
 
 Dependencies: Python3 (there is also a version of this in [Bash](https://github.com/longpdo/bitbar-plugins-custom/blob/master/deactivated-plugins/yahoo-stock-ticker.5m.sh), but without the price alarm functionality)
 
