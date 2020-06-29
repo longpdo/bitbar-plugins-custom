@@ -95,19 +95,22 @@ Or download .app file directly: [Get the latest version of BitBar](https://githu
 
 ### Installation
 
-1: Clone the repository
+1: Fork the repository (using the `Fork` button at the top)
+
+2: Clone the repository
 
 ```sh
-git clone https://github.com/longpdo/bitbar-plugins-custom.git
+# Replace {YOUR_USERNAME} with your actual username
+git clone https://github.com/{YOUR_USERNAME}/bitbar-plugins-custom.git
 ```
 
-2: Change directory to bitbar-plugins-custom
+3: Change directory to bitbar-plugins-custom
 
 ```sh
 cd bitbar-plugins-custom
 ```
 
-3: Install python requirements
+4: Install python requirements
 
 ```sh
 pip3 install -r requirements.txt
