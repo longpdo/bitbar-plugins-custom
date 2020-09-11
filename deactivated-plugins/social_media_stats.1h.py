@@ -3,7 +3,7 @@
 # Icons made by Freepik (https://www.flaticon.com/authors/freepik)
 #
 # <bitbar.title>Social Media Stats</bitbar.title>
-# <bitbar.version>v1.0</bitbar.version>
+# <bitbar.version>v1.1</bitbar.version>
 # <bitbar.author>Long Do</bitbar.author>
 # <bitbar.author.github>longpdo</bitbar.author.github>
 # <bitbar.desc>Shows YouTube subscribers, Facebook likes and Instagram followers.</bitbar.desc>

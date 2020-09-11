@@ -73,7 +73,7 @@ Dependencies: Python3 (there is also a version of this in [Bash](https://github.
 
 Dependencies: Python3, beautifulsoup4, requests
 
-* Shows YouTube subscribers, Facebook likes, Instagram and Twitter followers.
+* Shows YouTube subscribers, Facebook likes and Instagram followers.
 
 [![Social Media Stats Screenshot][social-media-stats-screenshot]](https://github.com/longpdo/bitbar-plugins-custom/blob/master/plugins/yahoo-weather.1h.py)
 
