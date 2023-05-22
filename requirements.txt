@@ -5,4 +5,4 @@
 beautifulsoup4 == 4.7.1
 
 # social_media_stats.1h.py: 17
-requests == 2.22.0
+requests == 2.31.0
